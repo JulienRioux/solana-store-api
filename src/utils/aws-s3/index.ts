@@ -35,8 +35,6 @@ export const uploadImageToCloud = async ({
   try {
     const stored = await s3.upload(params).promise();
 
-    console.log('stored =>>', stored);
-
     const { Location } = stored;
     return {
       encoding,
