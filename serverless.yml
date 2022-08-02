@@ -39,3 +39,8 @@ plugins:
 package:
   patterns:
     - node_modules/**
+
+# https://github.com/dherault/serverless-offline/issues/931#issuecomment-602245703
+custom:
+  serverless-offline:
+    useChildProcesses: true

@@ -1,4 +1,4 @@
-const { ApolloServer, gql } = require('apollo-server-lambda');
+const { ApolloServer } = require('apollo-server-lambda');
 const express = require('express');
 import jwt from 'jsonwebtoken';
 const graphqlUploadExpress = require('graphql-upload/graphqlUploadExpress.js');
@@ -68,6 +68,9 @@ const serverHandler = server.createHandler({
     app.use(graphqlUploadExpress());
     app.use(middleware);
     return app;
+  },
+  cors: {
+    origin: '*',
   },
 });
 

@@ -6,6 +6,8 @@ export const updateUser = async ({
   walletAddress,
   subDomain,
   currency,
+  saleTax,
+  image,
 }) => {
   const user = await UserModel.findByIdAndUpdate(
     id,
@@ -14,6 +16,8 @@ export const updateUser = async ({
       ...(walletAddress && { walletAddress }),
       ...(subDomain && { subDomain }),
       ...(currency && { currency }),
+      ...(saleTax && { saleTax }),
+      ...(image && { image }),
       updatedAt: new Date(),
     },
     { upsert: true }

@@ -6,6 +6,8 @@ export const schemaTypes = `
     walletAddress: String
     subDomain: String
     currency: String
+    image: String
+    saleTax: Int
   }
 
   type AuthenticateResponse {

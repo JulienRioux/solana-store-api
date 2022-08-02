@@ -13,6 +13,8 @@ export interface IUser {
   walletAddress: string;
   subDomain: string;
   currency: string;
+  saleTax: number;
+  image: string;
 }
 
 const UserSchema = new Schema<IUser>({
@@ -26,6 +28,8 @@ const UserSchema = new Schema<IUser>({
   walletAddress: String,
   subDomain: { required: true, type: String, unique: true },
   currency: String,
+  saleTax: String,
+  image: String,
 });
 
 export const UserModel = model<IUser>('User', UserSchema);
