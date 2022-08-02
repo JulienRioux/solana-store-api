@@ -7,7 +7,7 @@ export const schemaTypes = `
     subDomain: String
     currency: String
     image: String
-    saleTax: Int
+    saleTax: Float
   }
 
   type AuthenticateResponse {

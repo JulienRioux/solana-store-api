@@ -28,7 +28,7 @@ const UserSchema = new Schema<IUser>({
   walletAddress: String,
   subDomain: { required: true, type: String, unique: true },
   currency: String,
-  saleTax: String,
+  saleTax: Number,
   image: String,
 });
 

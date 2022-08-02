@@ -16,7 +16,7 @@ export const updateUser = async ({
       ...(walletAddress && { walletAddress }),
       ...(subDomain && { subDomain }),
       ...(currency && { currency }),
-      ...(saleTax && { saleTax }),
+      ...(!isNaN(saleTax) && { saleTax }),
       ...(image && { image }),
       updatedAt: new Date(),
     },
